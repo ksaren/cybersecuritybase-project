@@ -1,6 +1,6 @@
 # cybersecuritybase-project
 
-This is first course project for cyber security mooc course series (https://cybersecuritybase.github.io/), 
+This is the first course project of cyber security mooc course series (https://cybersecuritybase.github.io/), 
 organised by University of Helsinki in collaboration with F-secure.
 
 My aim within this project is to implement a very simple web application with at least five common, severe security flaws.
