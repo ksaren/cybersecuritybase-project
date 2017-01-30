@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Sign up form</title>
+        <title>Give your customer a present!</title>
+
+        <style>
+            
+            body {
+                font-family:"Arial";
+                background-size: 100% auto;
+                background-color: pink;
+            }
+            p {
+                font-size:150%;
+            }
+        </style>
+        
+
     </head>
+
     <body>
+        
+        <a th:href="@{/admin}">Login here.</a>
+        
+        <a th:href="@{/logout}">Logout here.</a>
 
-        <h1>Sign up to the event using this form</h1>
+        <p>Valentine's day is coming!
+            <br/> This year entrepreneurs community ValentineHappiness is offering You and Your shop a possibility of joining our campaign:
+            <br/> by signing in you promise to give your customer a little present
+            <br/> if they wish you <i>a Happy Valentine's day!</i>
+            <br/> And what you'll get back? Some great visibility through our channels, which may spawn amazing deals to your company...</p>
 
-        <form action="#" th:action="@{/form}" method="POST">
-            <p><label for="name">Name</label>: <input type="text" name="name" id="name"/></p>
+        <h1>JOIN AND MAKE SOMEONE HAPPY!</h1>
+
+        <h2>Fill in your company details now:</h2>
+
+        
+            <form action="#" th:action="@{/welcome}" method="POST">
+                
+            <p><label for="name">Company name</label>: <input type="text" name="name" id="name"/></p>
+            <p><label for="password">Password</label>: <input type="password" name="password" id="password"/></p>
             <p><label for="address">Address</label>: <input type="text" name="address" id="address"/></p>
-            <p><input type="submit" value="Submit" /></p>
+            <p><label for="city">City</label>: <input type="text" name="city" id="city"/></p>
+            <p><label for="card">Credit Card Number</label>: <input type="text" name="card" id="card"/></p>
+            
+            <p><input type="submit" value="Join to HappyEntrepreneurs!" /></p>
+            </form>
+
+        
+        <p> A customer? Here you can list all the shop's that are<br/> willing to thank you for your Valentine's day greetings.</p>
+
+
+        
+
+        
+        <ul>
+            <li th:each="city : ${cities}" >
+                <p><span th:utext="${city}">City</span></p>
+            </li>
+        </ul>
+        
+         <form action="#" th:action="@{/cities}" method="POST">  
+            <p><label for="name">City</label>: <input type="text" name="city" id="citysearch"/></p>
+            <p><input type="submit" value="Search by City..." /></p>
+          
         </form>
 
-        <p></p>
+
+        <p><i>Cheers, ValentineHappiness team</i></p>
+
+
+        <p><i>(This page is a student project of <a href="https://github.com/ksaren/cybersecuritybase-project">Cyber Security Mooc course</a> and implements five common security flaws.<br/>)</i></p>
     </body>
 </html>

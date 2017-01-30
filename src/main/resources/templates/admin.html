@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>You're now logged in. Here you can check who's already in!</title>
+
+        <style>
+            
+            body {
+                font-family:"Arial";
+                background-size: 100% auto;
+                background-color: pink;
+            }
+            p {
+                font-size:150%;
+            }
+        </style>
+
+    
+    </head>
+    
+    <body>
+        <div>
+        <table>
+            <tr>
+                <th>Already signed in shops:</th>
+            </tr>
+
+            <tr th:each="signup : ${signups}">
+                <!-- OWASP Zap flaw A3 (XSS) due to utext-->
+                <td th:utext="${signup.name}">Name</td>
+                <td th:utext="${signup.address}">Address</td>
+                <td th:utext="${signup.city}">City</td>
+            </tr>
+        </table>
+        
+        <form action="#" th:action="@{/signups}" method="GET">  
+            <p><input type="submit" value="LIST SHOPS" /></p>
+        </form>
+        
+        <form action="#" th:action="@{/admin}" method="GET">  
+            <p><input type="submit" value="HIDE SHOPS" /></p>
+        </form>
+        
+        <a th:href="@{/form}">Return to the main page</a>
+        
+        </div>
+    </body>
+</html>

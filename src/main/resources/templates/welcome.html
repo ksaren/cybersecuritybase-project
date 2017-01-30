@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Welcome to our happy team!!</title>
+        
+        <style>
+            body {
+                font-family:"Arial";
+                background-position: center top;
+                background-size: 100% auto;
+                background-color: pink;
+            }
+            p {
+                font-size:150%;
+            }
+        </style>
+        
+    </head>
+    <body>
+
+        <h1>You have been signed up to the event and your details are added to our database.</h1>
+        
+        <a th:href="@{/form}">Return to the main page</a>
+
+    </body>
+</html>

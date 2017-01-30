@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Give your customer a present!</title>
+
+	<style>
+		body {
+		font-family:"Arial";
+		background-position: center top;
+    		background-size: 100% auto;
+		}
+		p {
+		font-size:150%;
+		}
+	</style>
+		
+    </head>
+
+    <body background="background_tie.jpg" size="auto">
+
+	<p>Valentine's day is coming!<br/> This year we are offering You and your shop a possibility of joining our campaign:<br/> by signing in you 		promise to give your customer a little present<br/> if they just wish you <i>a Happy Valentine's day!</i><br/>
+	And what you'll get back? Some great visibility, which may spawn amazing deals to you...</p>
+
+	<h1>JOIN AND MAKE SOMEONE HAPPY!</h1>
+
+        <h2>Fill in your company details now:</h2>
+
+        <form action="#" th:action="@{/form}" method="POST">
+            <p><label for="name">Name</label>: <input type="utext" name="name" id="name"/></p>
+            <p><label for="address">Address</label>: <input type="utext" name="address" id="address"/></p>
+            <p><input type="submit" value="We're in!" /></p>
+        </form>
+
+	<p> A customer? Here you can list all the shop's that are<br/> willing to thank you for your Valentine's day greetings.</p>
+
+	<form action="#" th:action="@{/form}" method="GET">
+		<p><input type="submit" value="LIST SHOPS" /></p>
+	</form>
+	<a href="http://www.freepik.com/free-photos-vectors/christmas">Background photograph designed by Valeria_aksakova - Freepik.com</a>
+
+        <p><i>Cheers, ValentineHappiness team</i></p>
+
+
+	<p><i>This page is a student project of <a href="https://github.com/ksaren/cybersecuritybase-project">Cyber Security Mooc course<a/>.<br/> 		Kaisa Saren, 2017.</i></p>
+    </body>
+</html>
