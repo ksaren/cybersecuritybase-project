@@ -1,7 +1,12 @@
 # cybersecuritybase-project
 
+<<<<<<< HEAD
 This is the first course project for Cyber Security MOOC course series (https://cybersecuritybase.github.io/), 
 organised by the University of Helsinki in collaboration with F-secure Ltd. Project is forked of a course template https://github.com/cybersecuritybase/cybersecuritybase-project.
+=======
+This is the first course project of cyber security mooc course series (https://cybersecuritybase.github.io/), 
+organised by University of Helsinki in collaboration with F-secure.
+>>>>>>> 8153aec425cdcb6e83e3931edf319036cbb9c7fe
 
 My aim within this project was to implement a very simple web application with at least five common, severe security flaws.
 Identified flaws are reported in another dokument; 'Five_of_ten_report.md'.
